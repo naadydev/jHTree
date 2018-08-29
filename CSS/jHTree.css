@@ -1,0 +1,162 @@
+﻿
+.tree > ul {
+    width: 2000px;
+}
+
+.tree * {
+    margin: 0;
+    padding: 0;
+}
+
+.tree ul {
+    white-space: nowrap;
+    padding-top: 20px;
+    position: relative;
+}
+
+.tree li {
+    float: left;
+    /*display: inline-block;*/
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+
+    .tree li .trcont {
+        /*cursor: pointer;*/
+        width: 150px;
+        /*border: 1px solid #ccc;
+                padding: 5px 10px;*/
+        /*text-decoration: none;*/
+        /*color: #666;
+                font-family: arial, verdana, tahoma;*/
+        /*font-size: 11px;*/
+        display: inline-block;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -moz-box-shadow: 5px 5px 5px #888;
+        -webkit-box-shadow: 5px 5px 5px #888;
+        box-shadow: 5px 5px 5px #888;
+    }
+
+
+
+
+.trcont .ui-widget-header {
+    cursor: pointer;
+}
+
+
+.tree > ul > li {
+    display: inline-block;
+    float: none;
+}
+
+/*.tree li .trcont .ui-widget-content:hover, .tree li .trcont .ui-widget-content:hover + div ul li .trcont .ui-widget-content {
+            background: #c8e4f8;
+            color: #000;
+            border: 2px solid #94a0b4;
+        }*/
+/*.tree li .trcont:hover + ul li .after,
+        .tree li .trcont:hover + ul li .before,
+        .tree li .trcont:hover + ul .before,
+        .tree li .trcont:hover + ul ul .before {
+            border-color: #94a0b4;
+        }*/
+/*.tree li.ui-draggable-dragging {
+            background: green;
+        }*/
+
+/*We will use ::before and ::after to draw the connectors*/
+.before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+
+.after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    /*left: 50%;*/
+    /*right: auto;*/
+    border-top: 1px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+.bfrul {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    height: 20px;
+}
+
+.contaftrdrop {
+    border: 2px solid yellow;
+}
+
+.tree li .dragactive > .trcont {
+    border: 1px solid yellow;
+}
+
+.tree li .drophover > .trcont {
+    border: 2px solid red;
+}
+
+.funcbtnb {
+    width: 18px;
+    height: 15px;
+    margin: 1px 1px 1px 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.funcbtna {
+    /*width: 15px;
+            height: 15px;*/
+    float: right;
+    margin-top: 1px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.tfocus {
+    background: #c8e4f8;
+    color: #000;
+    border: 2px solid #94a0b4;
+}
+
+.tnode {
+}
+
+/*---- For Animation when change to other Class ----------*/
+.ui-widget-content {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.zomrval {
+    border: 0;
+    color: #f6931f;
+    font-weight: bold;
+}
+
+.zmrcntr {
+    float: left;
+    width: 40px;
+}
